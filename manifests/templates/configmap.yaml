@@ -71,11 +71,6 @@ data:
               - 'Matthews-MacBook-Air.local:9100'
               - 'Nicoles-MacBook-Pro.local:9100'
 
-      - job_name: 'woodpecker'
-        bearer_token_file: /etc/prometheus-secrets/token
-        static_configs:
-          - targets: ['woodpecker-server.woodpecker.svc:80']
-
       - job_name: 'openbao'
         metrics_path: /v1/sys/metrics
         params:
