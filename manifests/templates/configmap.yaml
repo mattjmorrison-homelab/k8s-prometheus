@@ -71,6 +71,15 @@ data:
               - 'Matthews-MacBook-Air.local:9100'
               - 'Nicoles-MacBook-Pro.local:9100'
 
+      - job_name: 'nix-node-exporter'
+        static_configs:
+          - targets:
+              - 'macbook-2008-a.local:9100'
+              - 'macbook-2008-b.local:9100'
+              - 'macbook-pro-2010.local:9100'
+            labels:
+              os: nixos
+
       - job_name: 'openbao'
         metrics_path: /v1/sys/metrics
         params:
