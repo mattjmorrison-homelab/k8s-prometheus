@@ -60,7 +60,6 @@ data:
       - job_name: 'steamos-node-exporter'
         static_configs:
           - targets:
-              - 'basementpc.local:9100'
               - 'nevespc.local:9100'
             labels:
               os: steamos
@@ -73,9 +72,6 @@ data:
       - job_name: 'nix-node-exporter'
         static_configs:
           - targets:
-              - 'macbook-2008-a.local:9100'
-              - 'macbook-2008-b.local:9100'
-              - 'macbook-pro-2010.local:9100'
               - 'nixos.local:9100'
             labels:
               os: nixos
