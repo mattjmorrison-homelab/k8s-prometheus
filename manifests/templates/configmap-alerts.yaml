@@ -164,7 +164,7 @@ data:
               summary: "GitHub Actions runner controller has reconcile errors on EphemeralRunner -- a runner may be stuck failing to provision"
 
           - alert: SlowInternetSpeed
-            expr: speedtest_download_bits_per_second < 50000000
+            expr: speedtest_download_bits_per_second > 0 and speedtest_download_bits_per_second < 50000000
             for: 5m
             labels:
               severity: warning
