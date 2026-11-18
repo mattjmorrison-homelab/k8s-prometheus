@@ -170,3 +170,10 @@ data:
               severity: warning
             annotations:
               summary: "Internet download speed is {{ "{{" }} $value | printf \"%.1f\" {{ "}}" }}bps, below 50Mb/s"
+
+          - alert: Watchdog
+            expr: vector(1)
+            labels:
+              severity: none
+            annotations:
+              summary: "Always-firing heartbeat for the Healthchecks dead-man's-switch"
